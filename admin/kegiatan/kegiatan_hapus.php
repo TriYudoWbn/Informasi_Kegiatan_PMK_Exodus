@@ -1,10 +1,10 @@
   <?php
-      session_start();
+  session_start();
 
-      if(!isset($_SESSION["username"])){
-        header("Location: ../auth/login.php");
-        exit;
-      }
+  if (!isset($_SESSION["username"])) {
+    header("Location: ../auth/login.php");
+    exit;
+  }
   ?>
 
   <?php
@@ -15,10 +15,10 @@
     // jika ada, ambil nilai id
     $id_kgt    = $_GET['id_kgt'];
     // query SQL menghapus data berdasarkan id yg dipilih
-    $sql    = "DELETE from kegiatan WHERE id_kgt ='".$id_kgt."'";
+    $sql    = "DELETE from kegiatan WHERE id_kgt ='" . $id_kgt . "'";
     // hapus data pada database
-    $query  = mysqli_query($kon,$sql);
-    
-    header("Location: https://pmkexodus.ojocekel.com/admin/kegiatan/tampil_data_kegiatan.php");
+    $query  = mysqli_query($kon, $sql);
+
+    header("Location: tampil_data_kegiatan.php");
   }
- ?>
+  ?>

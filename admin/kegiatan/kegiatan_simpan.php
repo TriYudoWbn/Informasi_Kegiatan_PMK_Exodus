@@ -55,9 +55,6 @@
     		echo "<center><br/><input type='button' value='Kembali' onClick='self.history.back()'/></center>";
     	}
     	else{
-    		header("Location: https://pmkexodus.ojocekel.com/admin/kegiatan/tampil_data_kegiatan.php");
+    		header("Location: ../kegiatan/tampil_data_kegiatan.php");
     	}
     }
-?>
-
-
